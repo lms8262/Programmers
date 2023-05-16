@@ -1,41 +1,41 @@
 class Solution {
     public String solution(int age) {
-        String answer = "";
+        StringBuilder sb = new StringBuilder();
         String ageStr = String.valueOf(age);
         for(int i=0; i<ageStr.length(); i++) {
             switch(ageStr.substring(i,i+1)) {
                     case "0":
-                answer += "a";
+                sb.append("a");
                 break;
                     case "1":
-                answer += "b";
+                sb.append("b");
                 break;
                     case "2":
-                answer += "c";
+                sb.append("c");
                 break;
                     case "3":
-                answer += "d";
+                sb.append("d");
                 break;
                     case "4":
-                answer += "e";
+                sb.append("e");
                 break;
                     case "5":
-                answer += "f";
+                sb.append("f");
                 break;
                     case "6":
-                answer += "g";
+                sb.append("g");
                 break;
                     case "7":
-                answer += "h";
+                sb.append("h");
                 break;
                     case "8":
-                answer += "i";
+                sb.append("i");
                 break;
                     case "9":
-                answer += "j";
+                sb.append("j");
                 break;
             }
         }
-        return answer;
+        return sb.toString();
     }
 }
