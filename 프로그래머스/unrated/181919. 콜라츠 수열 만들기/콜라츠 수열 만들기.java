@@ -2,11 +2,9 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int n) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        int idx = 0;
+        ArrayList<Integer> arrayList = new ArrayList<>();
         while(true) {
-            map.put(idx, n);
-            idx++;
+            arrayList.add(n);
             if(n == 1) {
                 break;
             }
@@ -16,9 +14,9 @@ class Solution {
                 n = 3 * n + 1;
             }
         }
-        int[] answer = new int[map.size()];
-        for(int i=0; i<map.size(); i++) {
-            answer[i] = map.get(i);
+        int[] answer = new int[arrayList.size()];
+        for(int i=0; i<arrayList.size(); i++) {
+            answer[i] = arrayList.get(i);
         }
         return answer;
     }
