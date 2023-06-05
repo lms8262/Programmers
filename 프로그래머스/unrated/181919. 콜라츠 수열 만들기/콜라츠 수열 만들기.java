@@ -3,8 +3,10 @@ import java.util.*;
 class Solution {
     public int[] solution(int n) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        for(int i=0; i<=1000; i++) {
-            map.put(i, n);
+        int idx = 0;
+        while(true) {
+            map.put(idx, n);
+            idx++;
             if(n == 1) {
                 break;
             }
