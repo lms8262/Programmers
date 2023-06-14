@@ -6,12 +6,12 @@ class Solution {
         int b2 = intervals[1][1];
         int size = (b1 - a1 + 1) + (b2 - a2 + 1);
         int[] answer = new int[size];
-        for(int i=0; i<answer.length; i++) {
-            if(i <= b1 - a1) {
-                answer[i] = arr[a1+i];
-            } else {
-                answer[i] = arr[a2+i-b1+a1-1];
-            }
+        int idx = 0;
+        for(int i=a1; i<=b1; i++) {
+            answer[idx++] = arr[i];
+        }
+        for(int i=a2; i<=b2; i++) {
+            answer[idx++] = arr[i];
         }
         return answer;
     }
