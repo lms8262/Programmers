@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int[] emergency) {
-        HashMap<Integer,Integer> map = new HashMap<>();
+        Map<Integer,Integer> map = new HashMap<>();
         
         int[] answer = new int[emergency.length];
         int[] sortEmergency = Arrays.copyOf(emergency, emergency.length); // 배열복사
