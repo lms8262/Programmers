@@ -12,12 +12,11 @@ class Solution {
                         answer[i] = 0;
                     }
                 }
-                break;
+                return answer;
             } else if(num == arr.length) {
                 return arr;
             }
             num *= 2;
         }
-        return answer;
     }
 }
