@@ -7,8 +7,6 @@ class Solution {
                 for(int i=0; i<num*2; i++) {
                     if(i<arr.length) {
                         answer[i] = arr[i];
-                    } else {
-                        answer[i] = 0;
                     }
                 }
                 return answer;
