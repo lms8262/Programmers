@@ -1,7 +1,8 @@
 class Solution {
     public int[] solution(int[] arr) {
         if(arr.length == 1) {
-            return new int[]{-1};
+            arr[0] = -1;
+            return arr;
         }
         
         int[] answer = new int[arr.length -1];
