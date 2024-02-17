@@ -3,10 +3,7 @@ class Solution {
         int answer = 0;
         int count = 1;
         
-        while(true) {
-            if(budget < count) {
-                break;
-            }
+        while(budget >= count) {
             for(int i=0; i<d.length; i++) {
                 if(budget < count) {
                     break;
