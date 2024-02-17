@@ -1,20 +1,16 @@
+import java.util.*;
+
 class Solution {
     public int solution(int[] d, int budget) {
         int answer = 0;
-        int count = 1;
+        Arrays.sort(d);
         
-        while(budget >= count) {
-            for(int i=0; i<d.length; i++) {
-                if(budget < count) {
-                    break;
-                }
-                if(d[i] == count) {
-                    budget -= count;
-                    answer++;
-                    d[i] = 0;
-                }
+        for(int i=0; i<d.length; i++) {
+            if(budget < d[i]) {
+                break;
             }
-            count++;
+            budget -= d[i];
+            answer++;
         }
         
         return answer;
