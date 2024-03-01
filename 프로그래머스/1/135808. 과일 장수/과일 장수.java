@@ -3,6 +3,7 @@ class Solution {
         int sum = 0;
         int min = 0;
         int count = 0;
+        
         for(int i=k; i>=1; i--) {
             for(int j=0; j<score.length; j++) {
                 if(count >= m) {
