@@ -4,6 +4,7 @@ class Solution {
         int count1 = 0;
         int count2 = 0;
         String x = "";
+        
         for(int i=0; i<s.length(); i++) {
             if(count1 == 0 && count2 == 0) {
                 x = s.substring(i,i+1);    
