@@ -5,6 +5,7 @@ class Solution {
         int[] answer = new int[]{7,7};
         Arrays.sort(lottos);
         Arrays.sort(win_nums);
+        
         for(int i=0; i<6; i++) {
             if(lottos[i] == 0) {
                 answer[0]--;
@@ -14,6 +15,7 @@ class Solution {
                 if(lottos[i] == win_nums[j]) {
                     answer[0]--;
                     answer[1]--;
+                    break;
                 }
             }
         }
