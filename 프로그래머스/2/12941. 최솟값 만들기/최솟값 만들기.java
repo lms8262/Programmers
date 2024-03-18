@@ -5,17 +5,10 @@ class Solution
     public int solution(int []A, int []B)
     {
         int answer = 0;
-        Integer[] aArr = new Integer[A.length];
-        Integer[] bArr = new Integer[B.length];
+        Arrays.sort(A);
+        Arrays.sort(B);
         for(int i=0; i<A.length; i++) {
-            aArr[i] = A[i];
-            bArr[i] = B[i];
-        }
-        
-        Arrays.sort(aArr);
-        Arrays.sort(bArr,Collections.reverseOrder());
-        for(int i=0; i<aArr.length; i++) {
-            answer += aArr[i]*bArr[i];
+            answer += A[i]*B[B.length-i-1];
         }
 
         return answer;
